@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="{% static 'favicon.ico' %}">
+    <meta charset="utf-8">
+    <title>500 - Server Error</title>
+    <style type="text/css">
+        html {
+            font-family: sans-serif;}
+    
+        #container {
+            margin: auto;
+            width: 850px;}
+    
+        #pageHeader {
+            background: white url("{% static 'header.png' %}") top right no-repeat;
+            height: 63px;
+            width: 200px;
+            margin: 0;
+            padding: 0;
+            left: 630px;
+            display: inline-block;
+            position: relative;}
+    
+        #pageHeader span {
+            display: none;}
+
+        #notfound {
+            width: 600px;
+            height: 413px;
+            margin: 0 auto;
+            background: white url("{% static '500.png' %}") center no-repeat;}
+
+        #help {
+            width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 10pt;}
+    
+        a {
+            color: #25B;
+            text-decoration: none;}
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <a href="http://www.hisparc.nl"><h1 id="pageHeader"><span>Public Database</span></h1></a>
+        <div id="content">
+            <div id="notfound"></div>
+            <div id="help">
+                Well this is not supposed to happen...<br>
+                A report of this error has been logged, we will try to fix it ASAP.<br>
+                For now you can go back home and try again: <a href="http://data.hisparc.nl">http://data.hisparc.nl</a>.<br>
+                Or contact us: beheer [at] hisparc.nl.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
